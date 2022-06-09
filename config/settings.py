@@ -34,6 +34,9 @@ INSTALLED_APPS = [
     # my apps
     'posts.apps.PostsConfig',
 
+    # 3rd-party apps
+    'rest_framework',
+
     # default app
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,6 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':[
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
